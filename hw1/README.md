@@ -30,7 +30,7 @@
 bash
 
 git clone https://github.com/dprotasovitsky/ds2_belhard.git
-cd energy-consumption-analytics
+cd hw1
 
     Создайте виртуальное окружение (рекомендуется)
 
