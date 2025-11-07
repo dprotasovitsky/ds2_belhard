@@ -1,0 +1,11 @@
+streamlit
+pandas
+numpy
+plotly
+torch
+scikit-learn
+optuna
+joblib
+sqlite3
+openpyxl
+scipy
