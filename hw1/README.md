@@ -161,7 +161,7 @@ hw1/
 
 Модели машинного обучения
 Архитектура LSTM
-python
+```
 
 AdvancedLSTMModel(
     input_size=7,           # Количество признаков
@@ -171,7 +171,7 @@ AdvancedLSTMModel(
     bidirectional=True,     # Двунаправленная LSTM
     use_attention=True      # Механизм внимания
 )
-
+```
 Особенности реализации
 
     Двунаправленные LSTM - анализ временных рядов в обоих направлениях
