@@ -29,7 +29,7 @@
 
 bash
 
-git clone https://github.com/dprotasovitsky/ds2_belhard.git hw1
+git clone https://github.com/dprotasovitsky/ds2_belhard.git
 
 cd hw1
 
