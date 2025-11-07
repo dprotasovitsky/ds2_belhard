@@ -1,0 +1,6 @@
+{
+  "model_name": "lstm_model_20251107_132847",
+  "saved_at": "2025-11-07T13:28:47.832038",
+  "input_size": 7,
+  "architecture": "AdvancedLSTMModel"
+}

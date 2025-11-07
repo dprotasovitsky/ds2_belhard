@@ -1,0 +1,10 @@
+{
+  "hidden_size": 256,
+  "num_layers": 2,
+  "dropout": 0.19815916677414996,
+  "learning_rate": 0.0022749138777969184,
+  "batch_size": 64,
+  "bidirectional": true,
+  "use_attention": false,
+  "input_size": 7
+}
