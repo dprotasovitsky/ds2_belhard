@@ -30,6 +30,7 @@
 bash
 
 git clone https://github.com/dprotasovitsky/ds2_belhard.git hw1
+
 cd hw1
 
     Создайте виртуальное окружение (рекомендуется)
