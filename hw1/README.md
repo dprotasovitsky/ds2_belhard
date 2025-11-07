@@ -56,7 +56,6 @@ streamlit run main_app.py
     Откройте браузер и перейдите по адресу http://localhost:8501
 
 Структура проекта
-text
 
 hw1/
 ├── main_app.py                 # Главное приложение Streamlit
