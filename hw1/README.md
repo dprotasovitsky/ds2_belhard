@@ -162,7 +162,6 @@ hw1/
 Модели машинного обучения
 Архитектура LSTM
 ```
-
 AdvancedLSTMModel(
     input_size=7,           # Количество признаков
     hidden_size=128,        # Размер скрытого слоя
@@ -198,15 +197,14 @@ AdvancedLSTMModel(
 Конфигурация
 
 Основные настройки находятся в config/settings.py:
-python
-
+```
 class Config:
     DATA_FILE = "household_power_consumption.txt"
     DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     DEFAULT_SEQUENCE_LENGTH = 24
     DEFAULT_OPTUNA_TRIALS = 30
     # ... другие настройки
-
+```
 Поддерживаемые устройства
 
     CPU - для небольших наборов данных
