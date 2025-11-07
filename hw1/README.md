@@ -58,7 +58,7 @@ streamlit run main_app.py
 Структура проекта
 
 hw1/
-├── main_app.py                 # Главное приложение Streamlit
+├── main_app.py                # Главное приложение Streamlit
 ├── config/
 │   └── settings.py            # Конфигурация приложения
 ├── data/
