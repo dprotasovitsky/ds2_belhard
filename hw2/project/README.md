@@ -21,7 +21,8 @@
     Модульная архитектура: Чистая структура кода для легкого расширения
 
 ### Установка
-####### Требования
+
+#### Требования
 
     Python 3.8+
 
@@ -33,7 +34,7 @@ bash
 
 pip install -r requirements.txt
 
-###### Зависимости
+#### Зависимости
 ```
 
 torch
@@ -115,7 +116,7 @@ text,sentiment
 Система автоматически определит колонки с текстом и метками.
 ### Конфигурация
 
-###### Основные параметры в config.py:
+#### Основные параметры в config.py:
 ```
 
 # Параметры модели
@@ -134,7 +135,8 @@ CLASSIFIERS = {
 ### Результаты
 
 #### Система автоматически генерирует:
-###### HTML отчет
+
+#### HTML отчет
 
     Сравнение точности классификаторов
 
@@ -144,7 +146,7 @@ CLASSIFIERS = {
 
     Временные метки выполнения
 
-###### Графики
+#### Графики
 
     Динамика потерь при обучении
 
@@ -152,7 +154,7 @@ CLASSIFIERS = {
 
     Важность признаков
 
-###### Пример вывода
+#### Пример вывода
 ```
 
 Лучший классификатор: catboost с точностью: 0.8945
@@ -163,7 +165,8 @@ CLASSIFIERS = {
   lightgbm: 0.8852
 ```
 ### API использования
-###### Обучение модели
+
+#### Обучение модели
 ```
 
 from models.triplet_autoencoder import TextTripletAutoencoder
@@ -178,12 +181,12 @@ classifier = EmbeddingClassifier(triplet_ae)
 classifier.train(texts, labels)
 predictions = classifier.predict(new_texts)
 ```
-###### Создание эмбеддингов
+#### Создание эмбеддингов
 ```
 
 embeddings = triplet_ae.encode_texts(texts)
 ```
-###### Поиск похожих текстов
+#### Поиск похожих текстов
 ```
 
 similar_texts = triplet_ae.find_similar_texts(
@@ -193,9 +196,10 @@ similar_texts = triplet_ae.find_similar_texts(
 )
 ```
 ### Расширение функциональности
+
 ### Добавление нового классификатора
 
-######    Добавьте конфигурацию в config.py:
+####    Добавьте конфигурацию в config.py:
 
 ```
 
@@ -204,7 +208,7 @@ similar_texts = triplet_ae.find_similar_texts(
     "param2": value2
 }
 ```
-######    Добавьте инициализацию в models/classifiers.py:
+####    Добавьте инициализацию в models/classifiers.py:
 
 ```
 
