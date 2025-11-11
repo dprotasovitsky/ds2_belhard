@@ -53,14 +53,11 @@ project/
 ├── config.py              # Конфигурация параметров
 ├── requirements.txt       # Зависимости проекта
 ├── models/
-│   ├── __init__.py
 │   ├── triplet_autoencoder.py  # Модель Triplet Autoencoder
 │   └── classifiers.py          # Классификаторы
 ├── data/
-│   ├── __init__.py
 │   └── processor.py           # Обработка данных
 ├── utils/
-│   ├── __init__.py
 │   ├── logger.py              # Система логирования
 │   └── reporter.py            # Генерация отчетов
 └── README.md
