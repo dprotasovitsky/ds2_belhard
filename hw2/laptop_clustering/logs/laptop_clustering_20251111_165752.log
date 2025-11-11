@@ -1,0 +1,122 @@
+2025-11-11 16:57:52,593 - root - INFO - Логирование инициализировано. Файл: logs\laptop_clustering_20251111_165752.log
+2025-11-11 16:57:52,593 - LaptopClusteringAnalysis - INFO - Инициализация LaptopClusteringAnalysis завершена
+2025-11-11 16:57:52,593 - LaptopClusteringAnalysis - INFO - ============================================================
+2025-11-11 16:57:52,593 - LaptopClusteringAnalysis - INFO - ЗАПУСК ПОЛНОГО АНАЛИЗА КЛАСТЕРИЗАЦИИ НОУТБУКОВ
+2025-11-11 16:57:52,593 - LaptopClusteringAnalysis - INFO - ============================================================
+2025-11-11 16:57:52,593 - LaptopClusteringAnalysis - INFO - ЭТАП 1: ЗАГРУЗКА И ПРЕДОБРАБОТКА ДАННЫХ
+2025-11-11 16:57:52,593 - DataProcessor - INFO - Загрузка данных из laptopCleanData.csv
+2025-11-11 16:57:52,597 - DataProcessor - INFO - Данные успешно загружены. Размер: (351, 14)
+2025-11-11 16:57:52,597 - DataProcessor - INFO - Начало предобработки данных
+2025-11-11 16:57:52,601 - DataProcessor - INFO - Обработан graphics_capacity: 271 записей с -1 заменены на 0
+2025-11-11 16:57:52,607 - DataProcessor - INFO - Создан признак is_gaming: 64 игровых ноутбуков
+2025-11-11 16:57:52,607 - DataProcessor - INFO - Предобработка данных завершена
+2025-11-11 16:57:52,607 - LaptopClusteringAnalysis - INFO - ЭТАП 2: РАЗВЕДОЧНЫЙ АНАЛИЗ
+2025-11-11 16:57:52,607 - Plotter - INFO - Визуализация распределений признаков
+2025-11-11 16:59:01,891 - Plotter - INFO - Построение матрицы корреляций
+2025-11-11 16:59:22,279 - Plotter - INFO - Анализ graphics_capacity
+2025-11-11 16:59:37,855 - LaptopClusteringAnalysis - INFO - ЭТАП 3: ПОДГОТОВКА ПРИЗНАКОВ
+2025-11-11 16:59:37,855 - DataProcessor - INFO - Подготовка признаков для кластеризации
+2025-11-11 16:59:37,864 - DataProcessor - INFO - Признаки подготовлены. Размерность: (351, 12)
+2025-11-11 16:59:37,864 - LaptopClusteringAnalysis - INFO - ЭТАП 4: ПОНИЖЕНИЕ РАЗМЕРНОСТИ
+2025-11-11 16:59:45,609 - LaptopClusteringAnalysis - INFO - UMAP проекция завершена
+2025-11-11 16:59:45,609 - LaptopClusteringAnalysis - INFO - LDA проекция завершена
+2025-11-11 16:59:45,609 - LaptopClusteringAnalysis - INFO - PCA проекция завершена. Объясненная дисперсия: 0.480
+2025-11-11 16:59:45,609 - LaptopClusteringAnalysis - INFO - ЭТАП 5: КЛАСТЕРИЗАЦИЯ
+2025-11-11 16:59:45,609 - ClusteringAlgorithms - INFO - Запуск иерархической кластеризации с 4 кластерами
+2025-11-11 16:59:45,617 - ClusteringAlgorithms - INFO - Иерархическая кластеризация завершена успешно
+2025-11-11 16:59:45,617 - Plotter - INFO - Построение дендрограммы для Иерархическая кластеризация
+2025-11-11 16:59:58,271 - ClusteringAlgorithms - INFO - Запуск DBSCAN для DBSCAN (оригинальные данные)
+2025-11-11 16:59:58,272 - ClusteringAlgorithms - INFO - Поиск оптимального eps для DBSCAN
+2025-11-11 16:59:58,275 - ClusteringAlgorithms - INFO - Оптимальный eps: 15.726
+2025-11-11 16:59:58,283 - ClusteringAlgorithms - INFO - DBSCAN DBSCAN (оригинальные данные): 1 кластеров, 0 шумовых точек
+2025-11-11 16:59:58,283 - ClusteringAlgorithms - WARNING - DBSCAN (оригинальные данные): DBSCAN нашел только 1 кластеров, используем KMeans
+2025-11-11 16:59:59,864 - ClusteringAlgorithms - INFO - KMeans использован как запасной вариант: 5 кластеров
+2025-11-11 16:59:59,864 - ClusteringAlgorithms - INFO - Запуск DBSCAN для DBSCAN (UMAP)
+2025-11-11 16:59:59,864 - ClusteringAlgorithms - INFO - Поиск оптимального eps для DBSCAN
+2025-11-11 16:59:59,864 - ClusteringAlgorithms - INFO - Оптимальный eps: 0.746
+2025-11-11 16:59:59,869 - ClusteringAlgorithms - INFO - DBSCAN DBSCAN (UMAP): 10 кластеров, 0 шумовых точек
+2025-11-11 16:59:59,869 - ClusteringAlgorithms - INFO - Запуск DBSCAN для DBSCAN (PCA)
+2025-11-11 16:59:59,869 - ClusteringAlgorithms - INFO - Поиск оптимального eps для DBSCAN
+2025-11-11 16:59:59,869 - ClusteringAlgorithms - INFO - Оптимальный eps: 10.115
+2025-11-11 16:59:59,875 - ClusteringAlgorithms - INFO - DBSCAN DBSCAN (PCA): 1 кластеров, 0 шумовых точек
+2025-11-11 16:59:59,875 - ClusteringAlgorithms - WARNING - DBSCAN (PCA): DBSCAN нашел только 1 кластеров, используем KMeans
+2025-11-11 16:59:59,925 - ClusteringAlgorithms - INFO - KMeans использован как запасной вариант: 5 кластеров
+2025-11-11 16:59:59,925 - LaptopClusteringAnalysis - INFO - ЭТАП 6: ОЦЕНКА КАЧЕСТВА
+2025-11-11 16:59:59,925 - ClusteringEvaluator - INFO - Оценка качества кластеризации
+2025-11-11 16:59:59,925 - ClusteringEvaluator - INFO - Hierarchical: 4 кластеров
+2025-11-11 16:59:59,929 - ClusteringEvaluator - INFO - DBSCAN_Original: 5 кластеров
+2025-11-11 16:59:59,936 - ClusteringEvaluator - INFO - DBSCAN_UMAP: 10 кластеров
+2025-11-11 16:59:59,940 - ClusteringEvaluator - INFO - DBSCAN_PCA: 5 кластеров
+2025-11-11 16:59:59,946 - ClusteringEvaluator - INFO - Оценка качества завершена
+2025-11-11 16:59:59,947 - LaptopClusteringAnalysis - INFO - ЭТАП 7: ВИЗУАЛИЗАЦИЯ РЕЗУЛЬТАТОВ
+2025-11-11 16:59:59,947 - Plotter - INFO - Визуализация результатов кластеризации
+2025-11-11 17:00:36,810 - LaptopClusteringAnalysis - INFO - ЭТАП 8: ИНТЕРПРЕТАЦИЯ КЛАСТЕРОВ
+2025-11-11 17:00:36,811 - LaptopClusteringAnalysis - INFO - Лучший метод кластеризации: DBSCAN_Original (Silhouette: 0.395)
+2025-11-11 17:00:36,812 - LaptopClusteringAnalysis - INFO - ДЕТАЛЬНАЯ ИНТЕРПРЕТАЦИЯ КЛАСТЕРОВ:
+2025-11-11 17:00:36,812 - LaptopClusteringAnalysis - INFO - --------------------------------------------------
+2025-11-11 17:00:36,813 - LaptopClusteringAnalysis - INFO - КЛАСТЕР 0:
+2025-11-11 17:00:36,813 - LaptopClusteringAnalysis - INFO -   Количество ноутбуков: 56
+2025-11-11 17:00:36,814 - LaptopClusteringAnalysis - INFO -   Средняя цена: 110029 руб.
+2025-11-11 17:00:36,814 - LaptopClusteringAnalysis - INFO -   Средний RAM: 11.6 GB
+2025-11-11 17:00:36,815 - LaptopClusteringAnalysis - INFO -   Средний объем памяти: 521 GB
+2025-11-11 17:00:36,815 - LaptopClusteringAnalysis - INFO -   Средняя графика: 1.8
+2025-11-11 17:00:36,815 - LaptopClusteringAnalysis - INFO -   Игровых ноутбуков: 19 (33.9%)
+2025-11-11 17:00:36,817 - LaptopClusteringAnalysis - INFO -   Ценовой сегмент: ПРЕМИУМ
+2025-11-11 17:00:36,819 - LaptopClusteringAnalysis - INFO -   Топ-3 бренда: {'asus': np.int64(23), 'lenovo': np.int64(20), 'acer': np.int64(5)}
+2025-11-11 17:00:36,821 - LaptopClusteringAnalysis - INFO -   Топ-3 процессора: {'AMD Ryzen 5': np.int64(22), 'AMD Ryzen 7': np.int64(22), 'AMD Ryzen 3': np.int64(8)}
+2025-11-11 17:00:36,823 - LaptopClusteringAnalysis - INFO - --------------------------------------------------
+2025-11-11 17:00:36,824 - LaptopClusteringAnalysis - INFO - КЛАСТЕР 1:
+2025-11-11 17:00:36,824 - LaptopClusteringAnalysis - INFO -   Количество ноутбуков: 161
+2025-11-11 17:00:36,826 - LaptopClusteringAnalysis - INFO -   Средняя цена: 91057 руб.
+2025-11-11 17:00:36,826 - LaptopClusteringAnalysis - INFO -   Средний RAM: 10.1 GB
+2025-11-11 17:00:36,826 - LaptopClusteringAnalysis - INFO -   Средний объем памяти: 494 GB
+2025-11-11 17:00:36,826 - LaptopClusteringAnalysis - INFO -   Средняя графика: 0.2
+2025-11-11 17:00:36,826 - LaptopClusteringAnalysis - INFO -   Игровых ноутбуков: 0 (0.0%)
+2025-11-11 17:00:36,826 - LaptopClusteringAnalysis - INFO -   Ценовой сегмент: СРЕДНИЙ
+2025-11-11 17:00:36,830 - LaptopClusteringAnalysis - INFO -   Топ-3 бренда: {'asus': np.int64(46), 'lenovo': np.int64(33), 'hp': np.int64(14)}
+2025-11-11 17:00:36,831 - LaptopClusteringAnalysis - INFO -   Топ-3 процессора: {'Intel Core i5': np.int64(77), 'Intel Core i3': np.int64(40), 'Intel Core i7': np.int64(37)}
+2025-11-11 17:00:36,831 - LaptopClusteringAnalysis - INFO - --------------------------------------------------
+2025-11-11 17:00:36,833 - LaptopClusteringAnalysis - INFO - КЛАСТЕР 2:
+2025-11-11 17:00:36,833 - LaptopClusteringAnalysis - INFO -   Количество ноутбуков: 45
+2025-11-11 17:00:36,834 - LaptopClusteringAnalysis - INFO -   Средняя цена: 184853 руб.
+2025-11-11 17:00:36,834 - LaptopClusteringAnalysis - INFO -   Средний RAM: 15.8 GB
+2025-11-11 17:00:36,835 - LaptopClusteringAnalysis - INFO -   Средний объем памяти: 751 GB
+2025-11-11 17:00:36,835 - LaptopClusteringAnalysis - INFO -   Средняя графика: 5.9
+2025-11-11 17:00:36,835 - LaptopClusteringAnalysis - INFO -   Игровых ноутбуков: 45 (100.0%)
+2025-11-11 17:00:36,836 - LaptopClusteringAnalysis - INFO -   Ценовой сегмент: ПРЕМИУМ
+2025-11-11 17:00:36,837 - LaptopClusteringAnalysis - INFO -   Топ-3 бренда: {'lenovo': np.int64(14), 'asus': np.int64(9), 'acer': np.int64(8)}
+2025-11-11 17:00:36,838 - LaptopClusteringAnalysis - INFO -   Топ-3 процессора: {'Intel Core i7': np.int64(23), 'Intel Core i5': np.int64(19), 'Intel Core i9': np.int64(2)}
+2025-11-11 17:00:36,838 - LaptopClusteringAnalysis - INFO - --------------------------------------------------
+2025-11-11 17:00:36,839 - LaptopClusteringAnalysis - INFO - КЛАСТЕР 3:
+2025-11-11 17:00:36,839 - LaptopClusteringAnalysis - INFO -   Количество ноутбуков: 30
+2025-11-11 17:00:36,839 - LaptopClusteringAnalysis - INFO -   Средняя цена: 52820 руб.
+2025-11-11 17:00:36,839 - LaptopClusteringAnalysis - INFO -   Средний RAM: 5.1 GB
+2025-11-11 17:00:36,839 - LaptopClusteringAnalysis - INFO -   Средний объем памяти: 994 GB
+2025-11-11 17:00:36,839 - LaptopClusteringAnalysis - INFO -   Средняя графика: 0.0
+2025-11-11 17:00:36,839 - LaptopClusteringAnalysis - INFO -   Игровых ноутбуков: 0 (0.0%)
+2025-11-11 17:00:36,839 - LaptopClusteringAnalysis - INFO -   Ценовой сегмент: СРЕДНИЙ
+2025-11-11 17:00:36,842 - LaptopClusteringAnalysis - INFO -   Топ-3 бренда: {'asus': np.int64(16), 'hp': np.int64(7), 'lenovo': np.int64(4)}
+2025-11-11 17:00:36,842 - LaptopClusteringAnalysis - INFO -   Топ-3 процессора: {'Intel Celeron': np.int64(10), 'Intel Core i3': np.int64(9), 'Intel Core i5': np.int64(7)}
+2025-11-11 17:00:36,843 - LaptopClusteringAnalysis - INFO - --------------------------------------------------
+2025-11-11 17:00:36,843 - LaptopClusteringAnalysis - INFO - КЛАСТЕР 4:
+2025-11-11 17:00:36,844 - LaptopClusteringAnalysis - INFO -   Количество ноутбуков: 59
+2025-11-11 17:00:36,844 - LaptopClusteringAnalysis - INFO -   Средняя цена: 323888 руб.
+2025-11-11 17:00:36,844 - LaptopClusteringAnalysis - INFO -   Средний RAM: 23.3 GB
+2025-11-11 17:00:36,844 - LaptopClusteringAnalysis - INFO -   Средний объем памяти: 963 GB
+2025-11-11 17:00:36,845 - LaptopClusteringAnalysis - INFO -   Средняя графика: 0.0
+2025-11-11 17:00:36,845 - LaptopClusteringAnalysis - INFO -   Игровых ноутбуков: 0 (0.0%)
+2025-11-11 17:00:36,845 - LaptopClusteringAnalysis - INFO -   Ценовой сегмент: ЛЮКС
+2025-11-11 17:00:36,845 - LaptopClusteringAnalysis - INFO -   Топ-3 бренда: {'apple': np.int64(57), 'asus': np.int64(2)}
+2025-11-11 17:00:36,846 - LaptopClusteringAnalysis - INFO -   Топ-3 процессора: {'Apple M2': np.int64(27), 'Apple M3': np.int64(24), 'Apple M1': np.int64(6)}
+2025-11-11 17:00:36,846 - LaptopClusteringAnalysis - INFO - --------------------------------------------------
+2025-11-11 17:00:36,846 - LaptopClusteringAnalysis - INFO - ЭТАП 9: СОХРАНЕНИЕ РЕЗУЛЬТАТОВ
+2025-11-11 17:00:36,849 - LaptopClusteringAnalysis - INFO - Метрики кластеризации сохранены в: results/clustering_metrics.csv
+2025-11-11 17:00:36,854 - LaptopClusteringAnalysis - INFO - Результаты кластеризации сохранены в: results/clustering_results.csv
+2025-11-11 17:00:36,855 - LaptopClusteringAnalysis - INFO - СВОДКА ПО МЕТОДАМ КЛАСТЕРИЗАЦИИ:
+2025-11-11 17:00:36,855 - LaptopClusteringAnalysis - INFO -   Hierarchical: 4 кластеров, Silhouette: 0.344, Calinski-Harabasz: 93, Davies-Bouldin: 1.161
+2025-11-11 17:00:36,856 - LaptopClusteringAnalysis - INFO -   DBSCAN_Original: 5 кластеров, Silhouette: 0.395, Calinski-Harabasz: 102, Davies-Bouldin: 1.086
+2025-11-11 17:00:36,856 - LaptopClusteringAnalysis - INFO -   DBSCAN_UMAP: 10 кластеров, Silhouette: 0.210, Calinski-Harabasz: 51, Davies-Bouldin: 1.211
+2025-11-11 17:00:36,856 - LaptopClusteringAnalysis - INFO -   DBSCAN_PCA: 5 кластеров, Silhouette: 0.317, Calinski-Harabasz: 88, Davies-Bouldin: 1.425
+2025-11-11 17:00:36,856 - LaptopClusteringAnalysis - INFO - ============================================================
+2025-11-11 17:00:36,856 - LaptopClusteringAnalysis - INFO - АНАЛИЗ УСПЕШНО ЗАВЕРШЕН
+2025-11-11 17:00:36,857 - LaptopClusteringAnalysis - INFO - ============================================================
