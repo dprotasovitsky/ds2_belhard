@@ -12,7 +12,7 @@ from torch.utils.data import DataLoader, Dataset
 from utils.logger import Logger, log_execution_time
 
 
-# Остальной код класса TripletTextDataset остается без изменений...
+# Код класса TripletTextDataset
 class TripletTextDataset(Dataset):
     def __init__(
         self,
@@ -101,7 +101,7 @@ class BagOfWordsEncoder(nn.Module):
             )
             prev_dim = hidden_dim
 
-        # Final embedding layer
+        # Последний слой для встраивания
         layers.append(nn.Linear(prev_dim, embedding_dim))
 
         self.encoder = nn.Sequential(*layers)
@@ -137,7 +137,7 @@ class BagOfWordsDecoder(nn.Module):
             )
             prev_dim = hidden_dim
 
-        # Final reconstruction layer
+        # Последний слой реконструкции
         layers.extend(
             [
                 nn.Linear(prev_dim, output_dim),
