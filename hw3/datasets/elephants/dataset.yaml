@@ -1,0 +1,6 @@
+path: ../datasets/elephants  # Абсолютный или относительный путь к датасету
+train: images/train  # Относительно path
+val: images/val      # Относительно path
+
+nc: 1  # Number of Classes (количество классов)
+names: ['elephant']  # Имена классов
