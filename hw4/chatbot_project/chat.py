@@ -1,6 +1,5 @@
 import json
 import logging
-import os
 import random
 from datetime import datetime
 
@@ -188,10 +187,10 @@ class AdvancedChatBot:
 
         stats = (
             f"Статистика сессии:\n"
-            f"   • Всего сообщений: {total_messages}\n"
-            f"   • Сообщений от пользователя: {user_messages}\n"
-            f"   • Средняя уверенность: {avg_confidence:.2%}\n"
-            f"   • Распределение тегов: {tag_distribution}"
+            f"   Всего сообщений: {total_messages}\n"
+            f"   Сообщений от пользователя: {user_messages}\n"
+            f"   Средняя уверенность: {avg_confidence:.2%}\n"
+            f"   Распределение тегов: {tag_distribution}"
         )
 
         return stats
@@ -199,10 +198,10 @@ class AdvancedChatBot:
     def print_available_commands(self):
         """Печать доступных команд"""
         print("\nДоступные команды:")
-        print("   • 'выход', 'exit', 'quit' - завершение работы")
-        print("   • 'статистика', 'stats' - показать статистику")
-        print("   • 'команды' - показать это сообщение")
-        print("   • 'теги' - показать все доступные теги")
+        print("   'выход', 'exit', 'quit' - завершение работы")
+        print("   'статистика', 'stats' - показать статистику")
+        print("   'команды' - показать это сообщение")
+        print("   'теги' - показать все доступные теги")
 
     def print_available_tags(self):
         """Печать всех доступных тегов"""
