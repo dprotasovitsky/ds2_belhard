@@ -28,16 +28,16 @@ cyclegan_project/
 ├── config.py              # Конфигурация всех параметров
 ├── data_loader.py         # Загрузка и обработка данных
 ├── models.py              # Архитектуры генераторов и дискриминаторов
-├── train.py              # Логика обучения с TensorBoard
-├── test.py               # Комплексное тестирование моделей
-├── inference.py          # Инференс и веб-интерфейсы
-├── telegram_bot.py       # Telegram-бот
-├── streamlit_app.py      # Web-интерфейс на Streamlit
-├── utils.py              # Вспомогательные функции
-├── main.py              # Основной CLI интерфейс
-├── requirements.txt      # Зависимости
-├── .env                 # Конфигурация окружения (токены)
-└── README.md            # Эта документация
+├── train.py               # Логика обучения с TensorBoard
+├── test.py                # Комплексное тестирование моделей
+├── inference.py           # Инференс и веб-интерфейсы
+├── telegram_bot.py        # Telegram-бот
+├── streamlit_app.py       # Web-интерфейс на Streamlit
+├── utils.py               # Вспомогательные функции
+├── main.py                # Основной CLI интерфейс
+├── requirements.txt       # Зависимости
+├── .env                   # Конфигурация окружения (токены)
+└── README.md              # Эта документация
 ```
 ## Установка
 
@@ -91,10 +91,10 @@ mkdir -p example_images
 mkdir -p inference_outputs
 
 # Для датасета photo2comics (пример)
-# Поместите изображения лица людей в datasets/photo2comics/trainA/
-# Поместите изображения лица комикса в datasets/photo2comics/trainB/
-# Поместите изображения лица людей в datasets/photo2comics/testA/
-# Поместите изображения лица комикса в datasets/photo2comics/testB/
+# Поместите изображения лица человека в datasets/photo2comics/trainA/
+# Поместите изображения лица человека в стиле комикса в datasets/photo2comics/trainB/
+# Поместите изображения лица человека в datasets/photo2comics/testA/
+# Поместите изображения лица человека в стиле комикса в datasets/photo2comics/testB/
 ```
 ## Использование
 ### Обучение
