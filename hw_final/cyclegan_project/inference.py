@@ -90,7 +90,9 @@ class CycleGANInference:
         print(f"[Inference] Loaded model from: {checkpoint_path}")
 
     def preprocess_image(
-        self, image: Union[str, Image.Image, np.ndarray, torch.Tensor]
+        self,
+        image: Union[str, Image.Image, np.ndarray, torch.Tensor],
+        preserve_aspect_ratio: bool = True,  # Новый параметр
     ):
         """Препроцессинг изображения"""
         if isinstance(image, str):
@@ -106,6 +108,31 @@ class CycleGANInference:
             if image.dim() == 3:
                 image = image.unsqueeze(0)
             return image.to(self.device)
+
+        # Если нужно сохранить пропорции
+        if preserve_aspect_ratio:
+            # Сохраняем оригинальный размер
+            original_size = image.size
+
+            # Вычисляем новые размеры с сохранением пропорций
+            width, height = original_size
+            target_size = self.config.image_size
+
+            # Определяем коэффициент масштабирования
+            scale = target_size / min(width, height)
+            new_width = int(width * scale)
+            new_height = int(height * scale)
+
+            # Ресайзим
+            image = image.resize((new_width, new_height), Image.Resampling.LANCZOS)
+
+            # Центрируем и обрезаем
+            left = (new_width - target_size) // 2
+            top = (new_height - target_size) // 2
+            right = left + target_size
+            bottom = top + target_size
+
+            image = image.crop((left, top, right, bottom))
 
         # Применение трансформаций
         image_tensor = self.transform(image).unsqueeze(0).to(self.device)
