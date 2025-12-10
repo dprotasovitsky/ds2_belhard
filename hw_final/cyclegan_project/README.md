@@ -7,21 +7,21 @@
 <table>
   <tr><td colspan="6">Исходные изображения</td></tr>
   <tr>
-    <td><img src="example_images/1042.jpg" alt="исходное изображение" width="60"></td>
-    <td><img src="example_images/1043.jpg" alt="исходное изображение" width="60"></td>
-    <td><img src="example_images/1055.jpg" alt="исходное изображение" width="60"></td>
-    <td><img src="example_images/1070.jpg" alt="исходное изображение" width="60"></td>
-    <td><img src="example_images/1071.jpg" alt="исходное изображение" width="60"></td>
-    <td><img src="example_images/1084.jpg" alt="исходное изображение" width="60"></td>
+    <td><img src="example_images/1042.jpg" alt="исходное изображение" width="100"></td>
+    <td><img src="example_images/1043.jpg" alt="исходное изображение" width="100"></td>
+    <td><img src="example_images/1055.jpg" alt="исходное изображение" width="100"></td>
+    <td><img src="example_images/1070.jpg" alt="исходное изображение" width="100"></td>
+    <td><img src="example_images/1071.jpg" alt="исходное изображение" width="100"></td>
+    <td><img src="example_images/1084.jpg" alt="исходное изображение" width="100"></td>
   </tr>
   <tr><td colspan="6">Результат преобразования</td></tr>
   <tr>
-    <td><img src="test_results/1042_transformed.jpg" alt="результат преобразования" width="60"></td>
-    <td><img src="test_results/1043_transformed.jpg" alt="результат преобразования" width="60"></td>
-    <td><img src="test_results/1055_transformed.jpg" alt="результат преобразования" width="60"></td>
-    <td><img src="test_results/1070_transformed.jpg" alt="результат преобразования" width="60"></td>
-    <td><img src="test_results/1071_transformed.jpg" alt="результат преобразования" width="60"></td>
-    <td><img src="test_results/1084_transformed.jpg" alt="результат преобразования" width="60"></td>
+    <td><img src="test_results/1042_transformed.jpg" alt="результат преобразования" width="100"></td>
+    <td><img src="test_results/1043_transformed.jpg" alt="результат преобразования" width="100"></td>
+    <td><img src="test_results/1055_transformed.jpg" alt="результат преобразования" width="100"></td>
+    <td><img src="test_results/1070_transformed.jpg" alt="результат преобразования" width="100"></td>
+    <td><img src="test_results/1071_transformed.jpg" alt="результат преобразования" width="100"></td>
+    <td><img src="test_results/1084_transformed.jpg" alt="результат преобразования" width="100"></td>
   </tr>
 </table>
 
