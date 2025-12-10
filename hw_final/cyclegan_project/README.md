@@ -2,6 +2,29 @@
 
 Полнофункциональная реализация CycleGAN для преобразования изображений между двумя доменами с поддержкой обучения, тестирования, инференса и Telegram-бота.
 
+## Примеры преобразования
+
+<table>
+  <tr><td colspan="6">Исходные изображения</td></tr>
+  <tr>
+    <td><img src="example_images/1042.jpg" alt="исходное изображение" width="60"></td>
+    <td><img src="example_images/1043.jpg" alt="исходное изображение" width="60"></td>
+    <td><img src="example_images/1055.jpg" alt="исходное изображение" width="60"></td>
+    <td><img src="example_images/1070.jpg" alt="исходное изображение" width="60"></td>
+    <td><img src="example_images/1071.jpg" alt="исходное изображение" width="60"></td>
+    <td><img src="example_images/1084.jpg" alt="исходное изображение" width="60"></td>
+  </tr>
+  <tr><td colspan="6">Результат преобразования</td></tr>
+  <tr>
+    <td><img src="test_results/1042_transformed.jpg" alt="результат преобразования" width="60"></td>
+    <td><img src="test_results/1043_transformed.jpg" alt="результат преобразования" width="60"></td>
+    <td><img src="test_results/1055_transformed.jpg" alt="результат преобразования" width="60"></td>
+    <td><img src="test_results/1070_transformed.jpg" alt="результат преобразования" width="60"></td>
+    <td><img src="test_results/1071_transformed.jpg" alt="результат преобразования" width="60"></td>
+    <td><img src="test_results/1084_transformed.jpg" alt="результат преобразования" width="60"></td>
+  </tr>
+</table>
+
 ## Особенности
 
 * Полный цикл ML: обучение → тестирование → инференс → развертывание
@@ -28,16 +51,16 @@ cyclegan_project/
 ├── config.py              # Конфигурация всех параметров
 ├── data_loader.py         # Загрузка и обработка данных
 ├── models.py              # Архитектуры генераторов и дискриминаторов
-├── train.py               # Логика обучения с TensorBoard
-├── test.py                # Комплексное тестирование моделей
-├── inference.py           # Инференс и веб-интерфейсы
-├── telegram_bot.py        # Telegram-бот
-├── streamlit_app.py       # Web-интерфейс на Streamlit
-├── utils.py               # Вспомогательные функции
-├── main.py                # Основной CLI интерфейс
-├── requirements.txt       # Зависимости
-├── .env                   # Конфигурация окружения (токены)
-└── README.md              # Эта документация
+├── train.py              # Логика обучения с TensorBoard
+├── test.py               # Комплексное тестирование моделей
+├── inference.py          # Инференс и веб-интерфейсы
+├── telegram_bot.py       # Telegram-бот
+├── streamlit_app.py      # Web-интерфейс на Streamlit
+├── utils.py              # Вспомогательные функции
+├── main.py              # Основной CLI интерфейс
+├── requirements.txt      # Зависимости
+├── .env                 # Конфигурация окружения (токены)
+└── README.md            # Эта документация
 ```
 ## Установка
 
@@ -91,10 +114,10 @@ mkdir -p example_images
 mkdir -p inference_outputs
 
 # Для датасета photo2comics (пример)
-# Поместите изображения лица человека в datasets/photo2comics/trainA/
-# Поместите изображения лица человека в стиле комикса в datasets/photo2comics/trainB/
-# Поместите изображения лица человека в datasets/photo2comics/testA/
-# Поместите изображения лица человека в стиле комикса в datasets/photo2comics/testB/
+# Поместите изображения лица людей в datasets/photo2comics/trainA/
+# Поместите изображения лица комикса в datasets/photo2comics/trainB/
+# Поместите изображения лица людей в datasets/photo2comics/testA/
+# Поместите изображения лица комикса в datasets/photo2comics/testB/
 ```
 ## Использование
 ### Обучение
@@ -147,8 +170,8 @@ python main.py --mode inference \
 # Пакетная обработка директории
 python main.py --mode inference \
     --checkpoint checkpoints/cyclegan_best.pth \
-    --input-dir images/ \
-    --output-dir results/ \
+    --input-dir example_images/ \
+    --output-dir test_results/ \
     --direction B_to_A
 
 # Циклическое преобразование
